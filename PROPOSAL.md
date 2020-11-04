@@ -1,5 +1,3 @@
-Put your final project proposal here.
-
 I would like to create an interactive scientific app that can graphically 
 display astronomical information from the Neowise Near-Earth-Object dataset.
 This is essentially a significant expansion to the JSON assingment we did in 
