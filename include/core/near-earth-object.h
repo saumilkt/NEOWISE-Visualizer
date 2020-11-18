@@ -14,7 +14,7 @@ using std::string;
  public:
   // constructor from Json File
   NEObject(string designation, string discovery_date, double h_mag,
-           double h_mag, double moid_au, double q_au_1, double q_au_2,
+           double moid_au, double q_au_1, double q_au_2,
            double period_yr, double i_deg, string pha, string orbit_class);
 
   // constructor to handle any missing values
