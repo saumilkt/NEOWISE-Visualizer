@@ -2,7 +2,7 @@
 // Created by Saumil Thakore on 11/17/20.
 //
 
-#include "include/core/json-deserlize.h"
+#include "include/core/json-deserialize.h"
 #include <fstream>
 
 namespace neowisejson {
