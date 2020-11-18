@@ -33,7 +33,7 @@ namespace neowisejson {
 
     // Returns a tuple of the designations of the objects with the lowest, and
     // highest apparent magnitudes
-    std::tuple<std::string,std::string> GetMaxAndMinMagnitudes();
+    std::tuple<string,string> GetMaxAndMinMagnitudes();
   };
 } // namespace neowisejson
 
