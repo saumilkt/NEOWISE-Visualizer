@@ -7,6 +7,8 @@
 
 #include "jsoncpp/json.h"
 #include "near-earth-object.h"
+#include "near-earth-object-explorer.h"
+
 #include <vector>
 #include <string>
 #include <tuple>
@@ -15,7 +17,7 @@ namespace neowisejson {
   using Json::Value;
 
   // deserializes the neowise dataset
-  std::vector<neowisejson::NEObject> DeserializeDataset(std::string filename);
+  neowisejson::Explorer DeserializeDataset(std::string filename);
 }
 
 #endif //INCLUDE_JSON_DESERLIZE_H

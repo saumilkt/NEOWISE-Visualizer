@@ -6,7 +6,7 @@
 #include <fstream>
 
 namespace neowisejson {
-  std::vector<neowisejson::NEObject> DeserializeDataste(string filename) {
+  neowisejson::Explorer DeserializeDataste(string filename) {
     std::vector<neowisejson::NEObject> objects;
     std::ifstream data_file(filename, std::ifstream::binary);
     Json::Value neowise_data;
@@ -19,7 +19,7 @@ namespace neowisejson {
                object["i_deg"].asDouble(), object["pha"].asString(),
                object["orbit_class"].asString()));
     }
-    return objects;
+    return neowisejson::Explorer(objects);
   }
 
 
