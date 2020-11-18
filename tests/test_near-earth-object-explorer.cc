@@ -35,6 +35,10 @@ TEST_CASE("GetObjectWithMaxPerihelion") {
 }
 
 TEST_CASE("GetMaxAndMinMagnitudes") {
-
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/main/neowise.json"));
+  std::tuple<std::string,std::string> test = explorer.GetMaxAndMinMagnitudes();
+  REQUIRE(std::get<0>(test) == "(2014 JH57)");
+  REQUIRE(std::get<1>(test) == "(2010 LJ68)");
 }
 
