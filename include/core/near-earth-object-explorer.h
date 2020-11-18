@@ -13,10 +13,6 @@ namespace neowisejson {
   public:
     Explorer(std::vector<neowisejson::NEObject> objects);
 
-  private:
-    //list of objects
-    std::vector<neowisejson::NEObject> objects_;
-
     // getter
     std::vector<neowisejson::NEObject> GetObjects();
 
@@ -34,6 +30,12 @@ namespace neowisejson {
     // Returns a tuple of the designations of the objects with the lowest, and
     // highest apparent magnitudes
     std::tuple<string,string> GetMaxAndMinMagnitudes();
+
+  private:
+    //list of objects
+    std::vector<neowisejson::NEObject> objects_;
+
+
   };
 } // namespace neowisejson
 
