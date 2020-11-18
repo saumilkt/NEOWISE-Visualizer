@@ -11,11 +11,14 @@
 namespace neowisejson {
   class Explorer {
   public:
-    Explorer(std::vector<neowisejson::NEObject>);
+    Explorer(std::vector<neowisejson::NEObject> objects);
 
   private:
     //list of objects
-    std::vector<neowisejson::NEObject> objects;
+    std::vector<neowisejson::NEObject> objects_;
+
+    // getter
+    std::vector<neowisejson::NEObject> GetObjects();
 
     /* helper methods for da/ds */
     // returns a list of all potentially hazardous objects

@@ -6,7 +6,7 @@
 #include <fstream>
 
 namespace neowisejson {
-  neowisejson::Explorer DeserializeDataste(string filename) {
+  neowisejson::Explorer DeserializeDataset(string filename) {
     std::vector<neowisejson::NEObject> objects;
     std::ifstream data_file(filename, std::ifstream::binary);
     Json::Value neowise_data;
