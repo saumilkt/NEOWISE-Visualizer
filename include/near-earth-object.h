@@ -5,13 +5,12 @@
 #ifndef INCLUDE_JSON_DESERIALIZE_H
 #define INCLUDE_JSON_DESERIALIZE_H
 
-#include "json/json.h"
-
 #include <string>
 
 namespace neowisejson {
-  using std::string;
-class NEObject {
+using std::string;
+
+ class NEObject {
  public:
   // constructor from Json File
   NEObject(string designation, string discovery_date, double h_mag,
