@@ -44,7 +44,7 @@ if(NOT catch2_POPULATED)
     add_library(catch2 INTERFACE)
     target_include_directories(catch2 INTERFACE ${catch2_SOURCE_DIR}/single_include)
 endif()
-
+include_directories(.)
 get_filename_component(CINDER_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../../" ABSOLUTE)
 get_filename_component(APP_PATH "${CMAKE_CURRENT_SOURCE_DIR}/" ABSOLUTE)
 
@@ -56,7 +56,7 @@ list(APPEND SOURCE_FILES ${CORE_SOURCE_FILES} src/core/json-deserialize.cc )
 list(APPEND TEST_FILES tests/test_json-deserialize.cc)
 
 ci_make_app(
-        APP_NAME        idealgas-visualizer
+        APP_NAME        final-project-visualizer
         CINDER_PATH     ${CINDER_PATH}
         SOURCES         apps/neowise-json-main.cc ${SOURCE_FILES}
         INCLUDES        include

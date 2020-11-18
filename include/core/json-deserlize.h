@@ -15,7 +15,7 @@ namespace neowisejson {
   using Json::Value;
 
   // deserializes the neowise dataset
-  Value DeserializeDataset(std::string filename);
+  std::vector<neowisejson::NEObject> DeserializeDataset(std::string filename);
 
   // returns a list of all potentially hazardous objects
   std::vector<neowisejson::NEObject> FilterByPotentiallyHazardousObjects();
