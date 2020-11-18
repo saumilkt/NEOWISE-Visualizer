@@ -11,9 +11,13 @@ namespace neowisejson {
     std::ifstream data_file(filename, std::ifstream::binary);
     Json::Value neowise_data;
     data_file >> neowise_data;
-    for(Json::Value::iterator data_iter = neowise_data.begin();
-        data_iter!=neowise_data.end(); data_iter++) {
-      objects.push_back(NEObject());
+    for(auto& object : neowise_data) {
+      objects.emplace_back(NEObject(object["designation"].asString(),
+               object["discover_date"].asString(),object["h_mag"].asDouble(),
+               object["moid_au"].asDouble(), object["q_au_1"].asDouble(),
+               object["q_au_2"].asDouble(),object["period_yr"].asDouble(),
+               object["i_deg"].asDouble(), object["pha"].asString(),
+               object["orbit_class"].asString()));
     }
     return objects;
   }

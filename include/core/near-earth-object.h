@@ -20,6 +20,19 @@ using std::string;
   // constructor to handle any missing values
   NEObject();
 
+  // getter methods
+  string GetDesignation();
+  string GetDiscoverDate();
+  double GetHMag();
+  double GetMOID();
+  double GetQAU1();
+  double GetQAU2();
+  double GetPeriodYr();
+  double GetIDeg();
+  string GetPHA();
+  string GetOrbitClass();
+
+
 private:
   string designation_;
   string discovery_date_;
