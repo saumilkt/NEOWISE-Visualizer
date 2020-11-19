@@ -8,6 +8,5 @@
 
 int main(int argc, char* argv[]) {
   neowisejson::Explorer explorer = (neowisejson::DeserializeDataset("data/main/neowise.json"));
-  std::cout<<"Parsing Succesful"<<std::endl;
   return 0;
 }

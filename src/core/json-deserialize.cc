@@ -4,6 +4,7 @@
 
 #include "include/core/json-deserialize.h"
 #include <fstream>
+#include <iostream>
 
 namespace neowisejson {
   neowisejson::Explorer DeserializeDataset(string filename) {
@@ -20,6 +21,7 @@ namespace neowisejson {
                object["i_deg"].asDouble(), object["pha"].asString(),
                object["orbit_class"].asString()));
     }
+    std::cout<<"Parsing Succesful"<<std::endl;
     return neowisejson::Explorer(objects);
   }
 
