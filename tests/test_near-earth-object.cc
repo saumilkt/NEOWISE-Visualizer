@@ -21,7 +21,7 @@ TEST_CASE("Default Constructor") {
 TEST_CASE("Getters") {
   neowisejson::NEObject object("designation","ddate",3,4,5,6,7,8,"pha","oclass");
   SECTION("GetDesignation") {
-    REQUIRE(object.GetDesignation()=="desingation");
+    REQUIRE(object.GetDesignation()=="designation");
   }
 
   SECTION("GetDiscoveryDate") {
