@@ -5,7 +5,7 @@
 #ifndef INCLUDE_JSON_DESERLIZE_H
 #define INCLUDE_JSON_DESERLIZE_H
 
-#include "jsoncpp/json.h"
+#include "nlohman/json.hpp"
 #include "near-earth-object.h"
 #include "near-earth-object-explorer.h"
 
@@ -14,7 +14,6 @@
 #include <tuple>
 
 namespace neowisejson {
-  using Json::Value;
 
   // deserializes the neowise dataset
   neowisejson::Explorer DeserializeDataset(std::string filename);
