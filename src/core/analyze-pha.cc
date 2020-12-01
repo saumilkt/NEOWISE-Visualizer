@@ -2,15 +2,17 @@
 #include "include/core/near-earth-object-explorer.h"
 
 namespace neowisejson {
-  std::vector<NEObject>
-          neowisejson::Explorer::FilterByPotentiallyHazardousObjects() {
-    std::vector<NEObject> p_h_objects;
+  std::vector<neowisejson::NEObject>
+  neowisejson::Explorer::FilterByPotentiallyHazardousObjects() {
+    std::vector<NEObject> hazardous_objects;
+    // loop through objects_ & check if each NEObject is potentially hazardous,
+    // if so add to hazardous_objects, which is return after loop finishes
     for (NEObject object : objects_) {
-      if (object.GetPHA() == "Y"){
-        p_h_objects.push_back(object);
+      if (object.GetPHA() == "Y") {
+        hazardous_objects.push_back(object);
       }
     }
-    return p_h_objects;
+    return hazardous_objects;
   }
 
   size_t neowisejson::Explorer::GetPHACount() {

@@ -4,16 +4,19 @@
 namespace neowisejson {
   std::string neowisejson::Explorer::GetObjectWithMaxPerihelion(
           double max_perihelion) {
-    NEObject highest_qau1 = objects_.at(0);
+    // create a holder neobject to represent the desired neobject and set it as
+    // the first object in the list
+    NEObject max_perihelion_object;
+    max_perihelion_object = objects_.at(0);
     // check if object's q_au_1 value is greater than the current max's but
     // still less than user-specified max
     for (NEObject object : objects_) {
-      if (object.GetQAU1() > highest_qau1.GetQAU1() &&
+      if (object.GetQAU1() > max_perihelion_object.GetQAU1() &&
           object.GetQAU1() < max_perihelion) {
-        highest_qau1 = object;
+        max_perihelion_object = object;
       }
     }
-    return highest_qau1.GetDesignation();
+    return max_perihelion_object.GetDesignation();
   }
 
   double neowisejson::Explorer::GetAvgQAU1() {
