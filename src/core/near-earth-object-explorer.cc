@@ -57,18 +57,6 @@ namespace neowisejson {
     return max_perihelion_object.GetDesignation();
   }
 
-  std::tuple<string,string> neowisejson::Explorer::GetMaxAndMinMagnitudes() {
-    NEObject max_magnitude_object, min_magnitude_object = objects_.at(0);
-    for (NEObject object : objects_) {
-      if (object.GetHMag() > max_magnitude_object.GetHMag()) {
-        max_magnitude_object = object;
-      } else if (object.GetHMag() < min_magnitude_object.GetHMag()) {
-        min_magnitude_object = object;
-      }
-    }
-    return std::make_tuple(min_magnitude_object.GetDesignation(),
-                           max_magnitude_object.GetDesignation());
 
-  }
 
 }
