@@ -29,16 +29,7 @@ namespace neowisejson {
     return hazardous_objects;
   }
 
-  double neowisejson::Explorer::GetAverageMoid() {
-    size_t total_objects = 0;
-    double total_moid = 0;
-    // loop through objects and sum their moid_au
-    for (NEObject object : objects_) {
-      total_moid += object.GetMOID();
-    }
-    // return sum / total # of objects to get the avg
-    return total_moid / (double)total_objects;
-  }
+
 
   std::string neowisejson::Explorer::GetObjectWithMaxPerihelion(
           double max_perihelion) {
