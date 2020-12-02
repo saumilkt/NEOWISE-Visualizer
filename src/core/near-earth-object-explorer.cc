@@ -28,7 +28,7 @@ namespace neowisejson {
     }
     return hazardous_objects;
   }
-
+ 
   double neowisejson::Explorer::GetAverageMoid() {
     size_t total_objects = 0;
     double total_moid = 0;
