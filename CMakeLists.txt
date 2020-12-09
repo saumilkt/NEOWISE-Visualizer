@@ -51,16 +51,24 @@ get_filename_component(APP_PATH "${CMAKE_CURRENT_SOURCE_DIR}/" ABSOLUTE)
 include("${CINDER_PATH}/proj/cmake/modules/cinderMakeApp.cmake")
 
 list(APPEND CORE_SOURCE_FILES src/core/json-deserialize.cc src/core/near-earth-object.cc src/core/near-earth-object-explorer.cc)
-list(APPEND SOURCE_FILES ${CORE_SOURCE_FILES} src/core/json-deserialize.cc )
+list(APPEND SOURCE_FILES ${CORE_SOURCE_FILES} src/visualizer/json-app.cc )
 
 list(APPEND TEST_FILES  tests/test_near-earth-object.cc tests/test_near-earth-object-explorer.cc)
 
 ci_make_app(
-        APP_NAME        final-project-visualizer
+        APP_NAME        final-project-main
         CINDER_PATH     ${CINDER_PATH}
         SOURCES         apps/neowise-json-main.cc ${SOURCE_FILES}
         INCLUDES        include
 )
+
+ci_make_app(
+        APP_NAME        final-project-visualizer
+        CINDER_PATH     ${CINDER_PATH}
+        SOURCES         apps/cinder_app_main.cc ${SOURCE_FILES}
+        INCLUDES        include
+)
+
 
 ci_make_app(
         APP_NAME        final-project-test

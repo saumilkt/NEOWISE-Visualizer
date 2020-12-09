@@ -11,6 +11,8 @@
 namespace neowisejson {
   class Explorer {
   public:
+    Explorer();
+
     Explorer(std::vector<neowisejson::NEObject> objects);
 
     // getter

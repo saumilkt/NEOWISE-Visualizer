@@ -16,7 +16,7 @@
 namespace neowisejson {
 
   // deserializes the neowise dataset
-  neowisejson::Explorer DeserializeDataset(std::string filename);
+  neowisejson::Explorer DeserializeDataset(const char *filename);
 }
 
 #endif //INCLUDE_JSON_DESERLIZE_H

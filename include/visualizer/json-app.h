@@ -6,6 +6,7 @@
 #include "cinder/gl/gl.h"
 #include "../core/near-earth-object-explorer.h"
 #include "../core/near-earth-object.h"
+#include "../core/json-deserialize.h"
 namespace neowisejson {
 
   namespace visualizer {
@@ -17,15 +18,13 @@ namespace neowisejson {
       // Cinder will call 'setup' when the app is first created or initialized.
       void setup() override;
 
-      // Cinder will call 'update' before each call to 'draw'.
-      void update() override;
 
       // Cinder will call 'draw' each time the contents of the window need to be
       // redrawn.
       void draw() override;
 
     private:
-      Explorer explorer_;
+      //Explorer explorer_ = Explorer(neowisejson::DeserializeDataset("data/main/neowise.json"));
       const size_t kWindowSize = 750;
 
     };

@@ -9,7 +9,7 @@
 namespace neowisejson {
 using json = nlohmann::json;
 
-  neowisejson::Explorer DeserializeDataset(string filename) {
+  neowisejson::Explorer DeserializeDataset(const char *filename) {
     std::vector<neowisejson::NEObject> objects;
     std::ifstream ss("../../data/main/neowise.json");
     json neowise_data = json::parse(ss);

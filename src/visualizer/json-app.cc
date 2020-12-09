@@ -9,9 +9,8 @@ namespace neowisejson {
   namespace visualizer {
 
     JsonApp::JsonApp() {
-      explorer_ = Explorer(neowisejson::DeserializeDataset("data/main/neowise.json"));
-
     }
+
     void JsonApp::setup() {
       ci::app::setWindowSize((int) kWindowSize,(int) kWindowSize);
     }

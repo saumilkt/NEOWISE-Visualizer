@@ -6,6 +6,9 @@
 #include "include/core/near-earth-object.h"
 
 namespace neowisejson {
+  neowisejson::Explorer::Explorer() {
+    objects_.empty();
+  }
   neowisejson::Explorer::Explorer(std::vector<neowisejson::NEObject> objects) {
     for (NEObject object : objects) {
       objects_.push_back(object);
