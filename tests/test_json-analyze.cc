@@ -8,22 +8,26 @@
 #include "include/core/json-deserialize.h"
 
 // Test designation
-TEST_CASE(""){
-
+TEST_CASE("GetObjectWithDesignation"){
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
 }
 
 // Test discovery_date
-TEST_CASE(""){
-
+TEST_CASE("GetObjectWithGivenDiscoveryDate"){
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
 }
 
 // Test h_mag
-TEST_CASE(""){
-
+TEST_CASE("GetObjectWithMaxHMag"){
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
 }
 
-TEST_CASE(""){
-
+TEST_CASE("GetAverageHMag"){
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
 }
 
 TEST_CASE("GetMaxAndMinMagnitudes") {
@@ -35,8 +39,9 @@ TEST_CASE("GetMaxAndMinMagnitudes") {
 }
 
 // Test moid_au
-TEST_CASE(""){
-
+TEST_CASE("GetObjectWithMaxMoid"){
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
 }
 
 TEST_CASE("GetAvgMoid") {
@@ -52,34 +57,39 @@ TEST_CASE("GetObjectWithMaxPerihelion") {
   REQUIRE(explorer.GetObjectWithMaxPerihelion(13.123)=="C/2014 N3 (NEOWISE)");
 }
 
-TEST_CASE(""){
-
+TEST_CASE("GetAvgQAU1"){
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
 }
 
 // Test q_au_2
-TEST_CASE(""){
-
+TEST_CASE("GetObjectWithMaxApohelion"){
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
 }
 
-TEST_CASE(""){
-
+TEST_CASE("GetAvgQAU2"){
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
 }
 
 // Test period_yr
-TEST_CASE(""){
-
+TEST_CASE("GetObjectWithMaxPeriod"){
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
 }
 
-TEST_CASE(""){
-
+TEST_CASE("GetAvgPeriod"){
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
 }
 
 // Test i_deg
-TEST_CASE(""){
+TEST_CASE("GetObjectWithMaxIDeg"){
 
 }
 
-TEST_CASE(""){
+TEST_CASE("GetAvgIDeg"){
 
 }
 
@@ -92,15 +102,22 @@ TEST_CASE("FilterByPotentiallyHazardousObjects") {
           == "419880 (2011 AH37)");
 }
 
-TEST_CASE(""){
-
+TEST_CASE("GetPHACount"){
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.GetPHACount()==30);
 }
 
 // Test orbit_class
-TEST_CASE(""){
-
+TEST_CASE("FilterByOrbitClass"){
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.FilterByOrbitClass("Jupiter-family Comet").size()==7);
+  REQUIRE(explorer.FilterByOrbitClass("Jupiter-family Comet").front().GetIDeg()==5.18);
 }
 
-TEST_CASE(""){
-
+TEST_CASE("orbit_class"){
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.GetOrbitClassCount("Jupiter-family Comet")==7);
 }
