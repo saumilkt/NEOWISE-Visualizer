@@ -50,10 +50,10 @@ get_filename_component(APP_PATH "${CMAKE_CURRENT_SOURCE_DIR}/" ABSOLUTE)
 
 include("${CINDER_PATH}/proj/cmake/modules/cinderMakeApp.cmake")
 
-list(APPEND CORE_SOURCE_FILES src/core/json-deserialize.cc src/core/near-earth-object.cc src/core/near-earth-object-explorer.cc)
+list(APPEND CORE_SOURCE_FILES src/core/json-deserialize.cc src/core/near-earth-object.cc src/core/near-earth-object-explorer.cc src/core/json-analyze.cc)
 list(APPEND SOURCE_FILES ${CORE_SOURCE_FILES} src/visualizer/json-app.cc )
 
-list(APPEND TEST_FILES  tests/test_near-earth-object.cc tests/test_near-earth-object-explorer.cc)
+list(APPEND TEST_FILES  tests/test_near-earth-object.cc  tests/test_json-deserialize.cc tests/test_near-earth-object-explorer.cc tests/test_json-analyze.cc)
 
 ci_make_app(
         APP_NAME        final-project-main
