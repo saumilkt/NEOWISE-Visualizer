@@ -1,3 +1,6 @@
 .idea
 cmake-build-debug
 .ipynb_checkpoints
+data/.DS_Store
+src/python/.DS_Store
+src/python/visualization_generator.ipynb
