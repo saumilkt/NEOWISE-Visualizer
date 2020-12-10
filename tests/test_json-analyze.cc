@@ -11,23 +11,27 @@
 TEST_CASE("GetObjectWithDesignation"){
   neowisejson::Explorer
           explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.GetObjectWithDesignation("419880 (2011 AH37)").GetIDeg()==9.65);
 }
 
 // Test discovery_date
 TEST_CASE("GetObjectWithGivenDiscoveryDate"){
   neowisejson::Explorer
           explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.GetObjectWithGivenDiscoveryDate("2011-01-07T00:00:00.000").GetIDeg()==9.65);
 }
 
 // Test h_mag
 TEST_CASE("GetObjectWithMaxHMag"){
   neowisejson::Explorer
           explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.GetObjectWithMaxHMag(24.3).GetHMag()==24.1);
 }
 
 TEST_CASE("GetAverageHMag"){
   neowisejson::Explorer
           explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.GetAverageHMag()==22.3);
 }
 
 TEST_CASE("GetMaxAndMinMagnitudes") {
