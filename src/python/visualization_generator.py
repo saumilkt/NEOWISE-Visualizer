@@ -47,7 +47,7 @@ date_vs_magnitude = sns.scatterplot(x = "discovery_date", y = "h_mag", hue = "or
                                     data = neowise_data)
 date_vs_magnitude.set(xlabel = "Discovery Date", ylabel = "Apparent Magnitude")
 
-#plt.savefig('../../data/default-images/date_vs_magnitude.png', dpi = 100)
+plt.savefig('../../data/default-images/date_vs_magnitude.png', dpi = 100)
 
 
 # In[5]:
