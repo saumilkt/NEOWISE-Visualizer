@@ -46,6 +46,7 @@ TEST_CASE("GetMaxAndMinMagnitudes") {
 TEST_CASE("GetObjectWithMaxMoid"){
   neowisejson::Explorer
           explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.GetObjectWithMaxMoid(1.65).GetMOID()==1.625);
 }
 
 TEST_CASE("GetAvgMoid") {
@@ -64,28 +65,34 @@ TEST_CASE("GetObjectWithMaxPerihelion") {
 TEST_CASE("GetAvgQAU1"){
   neowisejson::Explorer
           explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.GetAvgQAU1()==3.45);
 }
 
 // Test q_au_2
 TEST_CASE("GetObjectWithMaxApohelion"){
   neowisejson::Explorer
           explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.GetObjectWithMaxApohelion(200)=="C/2010 KW7 (WISE)")
 }
 
 TEST_CASE("GetAvgQAU2"){
   neowisejson::Explorer
           explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.GetAvgQAU2()==13.45);
 }
 
 // Test period_yr
 TEST_CASE("GetObjectWithMaxPeriod"){
   neowisejson::Explorer
           explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.GetObjectWithMaxPeriod(0.75)=="(2010 HX107)");
+
 }
 
 TEST_CASE("GetAvgPeriod"){
   neowisejson::Explorer
           explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.GetAvgPeriod()==2.45);
 }
 
 // Test i_deg
