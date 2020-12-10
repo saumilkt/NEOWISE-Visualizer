@@ -7,6 +7,6 @@
 #include "core/near-earth-object-explorer.h"
 
 int main() {
-  neowisejson::Explorer explorer = (neowisejson::DeserializeDataset("data/main/neowise.json"));
+  neowisejson::Explorer explorer = (neowisejson::DeserializeDataset("data/json/neowise.json"));
   return 0;
 }

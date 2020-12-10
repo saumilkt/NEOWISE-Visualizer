@@ -24,7 +24,7 @@ namespace neowisejson {
       void draw() override;
 
     private:
-      //Explorer explorer_ = Explorer(neowisejson::DeserializeDataset("data/main/neowise.json"));
+      //Explorer explorer_ = Explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
       const size_t kWindowSize = 750;
 
     };
