@@ -97,11 +97,15 @@ TEST_CASE("GetAvgPeriod"){
 
 // Test i_deg
 TEST_CASE("GetObjectWithMaxIDeg"){
-
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.GetObjectWithMaxIDeg(1)=="(2013 YP139)");
 }
 
 TEST_CASE("GetAvgIDeg"){
-
+  neowisejson::Explorer
+          explorer(neowisejson::DeserializeDataset("data/json/neowise.json"));
+  REQUIRE(explorer.GetAvgIDeg()==0.46);
 }
 
 // Test pha
